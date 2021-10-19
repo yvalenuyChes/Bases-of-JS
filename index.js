@@ -48,6 +48,62 @@
 
 
 
+//! Тз на вывод строк
+
+const serverData = {
+   "2020-09-22 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
+   "2020-09-23 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
+   "2020-09-24 00:00:00": { conversions: 0, clicks: 8, spent: 0 },
+   "2020-09-25 00:00:00": { conversions: 0, clicks: 1, spent: 0 },
+   "2020-09-26 00:00:00": { conversions: 0, clicks: 0, spent: 0 },
+   "2020-09-27 00:00:00": { conversions: 0, clicks: 6, spent: 0 },
+   "2020-09-28 00:00:00": { conversions: 0, clicks: 0, spent: 0 }
+}
+
+
+function dataFunc(data) {
+
+   const itemsData = []
+
+   class Item {
+      constructor(label, data) {
+         this.label = label
+         this.data = data
+      }
+   }
+
+   for (i = 0; i < Object.keys(Object.values(data)[0]).length; i++) {
+      let item = new Item()
+      item.label = Object.keys(Object.values(data)[0])[i]
+      item.data = []
+
+      for (j = 0; j < (Object.values(data).length); j++) {
+         item.data.push(Object.entries(Object.values(data)[j])[i])
+      }
+      itemsData.push(item)
+   }
+
+   return (itemsData)
+
+}
+
+viewData = dataFunc(serverData);
+
+console.log(viewData)
+
+
+
+//console.log(`${i + 1} - ${Object.keys(Object.values(data)[i])}`)
+
+//  1 - conversions,clicks,spent
+//  2 - conversions,clicks,spent
+//  3 - conversions,clicks,spent
+//  4 - conversions,clicks,spent
+//  5 - conversions,clicks,spent
+//  6 - conversions,clicks,spent
+//  7 - conversions,clicks,spent
+
+
 //! Первый Урок
 
 
@@ -778,3 +834,9 @@
 // }
 
 // console.log(res);
+
+
+
+//! Задачи на функции работы со строками в JavaScript
+
+
