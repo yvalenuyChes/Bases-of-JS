@@ -50,46 +50,46 @@
 
 //! Тз на вывод строк
 
-const serverData = {
-   "2020-09-22 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
-   "2020-09-23 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
-   "2020-09-24 00:00:00": { conversions: 0, clicks: 8, spent: 0 },
-   "2020-09-25 00:00:00": { conversions: 0, clicks: 1, spent: 0 },
-   "2020-09-26 00:00:00": { conversions: 0, clicks: 0, spent: 0 },
-   "2020-09-27 00:00:00": { conversions: 0, clicks: 6, spent: 0 },
-   "2020-09-28 00:00:00": { conversions: 0, clicks: 0, spent: 0 }
-}
+// const serverData = {
+//    "2020-09-22 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
+//    "2020-09-23 00:00:00": { conversions: 0, clicks: 10, spent: 0 },
+//    "2020-09-24 00:00:00": { conversions: 0, clicks: 8, spent: 0 },
+//    "2020-09-25 00:00:00": { conversions: 0, clicks: 1, spent: 0 },
+//    "2020-09-26 00:00:00": { conversions: 0, clicks: 0, spent: 0 },
+//    "2020-09-27 00:00:00": { conversions: 0, clicks: 6, spent: 0 },
+//    "2020-09-28 00:00:00": { conversions: 0, clicks: 0, spent: 0 }
+// }
 
 
-function dataFunc(data) {
+// function dataFunc(data) {
 
-   const itemsData = []
+//    const itemsData = []
 
-   class Item {
-      constructor(label, data) {
-         this.label = label
-         this.data = data
-      }
-   }
+//    class Item {
+//       constructor(label, data) {
+//          this.label = label
+//          this.data = data
+//       }
+//    }
 
-   for (i = 0; i < Object.keys(Object.values(data)[0]).length; i++) {
-      let item = new Item()
-      item.label = Object.keys(Object.values(data)[0])[i]
-      item.data = []
+//    for (i = 0; i < Object.keys(Object.values(data)[0]).length; i++) {
+//       let item = new Item()
+//       item.label = Object.keys(Object.values(data)[0])[i]
+//       item.data = []
 
-      for (j = 0; j < (Object.values(data).length); j++) {
-         item.data.push(Object.entries(Object.values(data)[j])[i])
-      }
-      itemsData.push(item)
-   }
+//       for (j = 0; j < (Object.values(data).length); j++) {
+//          item.data.push(Object.entries(Object.values(data)[j])[i])
+//       }
+//       itemsData.push(item)
+//    }
 
-   return (itemsData)
+//    return (itemsData)
 
-}
+// }
 
-viewData = dataFunc(serverData);
+// viewData = dataFunc(serverData);
 
-console.log(viewData)
+// console.log(viewData)
 
 
 
@@ -102,6 +102,22 @@ console.log(viewData)
 //  5 - conversions,clicks,spent
 //  6 - conversions,clicks,spent
 //  7 - conversions,clicks,spent
+
+
+
+//! reverse2
+
+// const arr = [1, 2, 3, 4, 5, 6, 7]
+
+// function reverse2(arr) {
+//    let arr2 = []
+//    for (i = arr.length - 1; i >= 0; i--) {
+//       arr2.push(arr[i])
+//    }
+//    return arr2
+// }
+
+// console.log(reverse2(arr));
 
 
 //! Первый Урок
@@ -837,6 +853,145 @@ console.log(viewData)
 
 
 
-//! Задачи на функции работы со строками в JavaScript
+//! Задачи на функции работы с массивами в JavaScript
 
 
+
+//? Даны два массива: [1, 2, 3] и [4, 5, 6]. Объедините их вместе.
+
+
+// const arr1 = [1, 2, 3]
+
+// const arr2 = [4, 5, 6]
+
+// const res = arr1.concat(arr2)
+
+// console.log(res);
+
+
+
+//? Дан массив ['js', 'css', 'jq']. Выведите на экран первый и последний элемент.
+
+
+// const arr1 = ['js', 'css', 'jq']
+
+// console.log(arr1.shift(), arr1.pop())
+
+
+//?  Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [1, 2, 3],  другой [4,5].
+
+// const arr1 = [1, 2, 3, 4, 5]
+
+// const arr2 = arr1.slice(0, 3)
+// const arr3 = arr1.slice(3, 5)
+
+// console.log(arr2, arr3)
+
+
+
+
+//? //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const arr = [1, 2, 3, 4, 5]
+
+//? Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
+
+//* arr.splice(1, 2)
+
+//? Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
+
+//* const arr2 = arr.splice(1, 3)
+
+//?  Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 2, 3, 'a', 'b', 'c', 4, 5].
+
+//* arr.splice(3, 0, 'a', 'b', 'c')
+
+//? Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него массив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+
+// arr.splice(1, 0, 'a')
+// arr.splice(2, 0, 'b')
+// arr.splice(6, 0, 'c')
+// arr.splice(8, 0, 'e')
+
+
+// console.log(arr);
+
+
+//? Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.
+
+// const arr = [3, 4, 1, 2, 7]
+
+// arr.sort()
+
+// console.log(arr)
+
+
+
+//? Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.
+
+
+// const obj = { js: 'test', jq: 'hello', css: 'world' }
+
+// let data = Object.keys(obj)
+
+// console.log(data);
+
+
+//!
+
+
+//? Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+
+// function days(day) {
+//    switch (day) {
+//       case 1:
+//          console.log('Понедельник')
+//          break
+//       case 2:
+//          console.log('Вторник')
+//          break
+//       case 3:
+//          console.log('Среда')
+//          break
+//       case 4:
+//          console.log('Четверг')
+//          break
+//       case 5:
+//          console.log('Пятница')
+//          break
+//       case 6:
+//          console.log('Суббота')
+//          break
+//       case 7:
+//          console.log('Воскресенье')
+//          break
+//    }
+// }
+
+
+// days(1)
+// days(3)
+// days(7)
+
+
+
+
+//! На флаги
+
+// const arr = [1, 2, 4, 5, 6, 7, 8]
+// const arr1 = [5, 1, 1, 1, 1, 1, 5]
+// const arr2 = [1, 2, 4, 6, 7, 8]
+// const arr3 = [5, 5, 5, 5, 5, 5, 5]
+
+// function checkArr(arr) {
+//    for (i = 0; i <= arr.length; i++) {
+//       if (arr[i] === 5) {
+//          console.log(`Найдено число 5 в ${i} элементе`);
+//       }
+//    }
+// }
+
+// checkArr(arr)
+// checkArr(arr1)
+// checkArr(arr2)
+// checkArr(arr3)
