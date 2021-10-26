@@ -1356,3 +1356,254 @@
 // console.log(getDigitsSum(78));
 // console.log(getDigitsSum(11));
 // console.log(getDigitsSum(5));
+
+
+
+//? Найдите все года от 1 до 2021, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+
+//!
+
+// let sum1 = 0
+
+// function getDigitsSum(num) {
+//    numStr = `${num}`
+//    let sum = 0
+
+//    for (i = 0; i < numStr.length; i++) {
+//       sum += +numStr[i]
+//    }
+//    return sum
+// }
+
+// for (i = 1; i <= 2021; i++) {
+//    if (getDigitsSum(i) === 13) {
+//       sum1 += i
+//    }
+// }
+
+// console.log(sum1);
+
+
+//?  Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
+
+// function isEven(num) {
+//    if (num % 2 == 0) {
+//       return true
+//    } else {
+//       return false
+//    }
+// }
+
+// console.log(isEven(10))
+// console.log(isEven(5))
+// console.log(isEven(11))
+// console.log(isEven(6))
+
+
+//? Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+
+
+// const arr = [11, 12, 4, 7, 45, 47, 43, 14, 5, 1, 2, 7]
+
+// function evenArray(arr) {
+//    const arr1 = []
+//    for (i = 0; i < arr.length; i++) {
+//       if (isEven(arr[i])) {
+//          arr1.push(arr[i])
+//       }
+//    }
+//    return arr1
+// }
+
+// console.log(evenArray(arr));
+
+
+//? Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
+
+
+// function getDivisors(num) {
+//    let arr = []
+//    for (i = 1; i <= num; i++) {
+//       if (num % i == 0) {
+//          arr.push(i)
+//       }
+//    }
+//    return arr
+// }
+
+// console.log(getDivisors(5));
+// console.log(getDivisors(10));
+// console.log(getDivisors(12));
+// console.log(getDivisors(4));
+// console.log(getDivisors(100));
+
+
+
+//?  Дана строка. Сделайте заглавным первый символ каждого слова этой строки. 
+//?  Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+
+// function ucfirst(word) {
+//    let str = ''
+//    for (i = 0; i < word.length; i++) {
+//       if (i === 0) {
+//          str = word[i].toUpperCase()
+//       } else {
+//          str += word[i]
+//       }
+//    }
+//    return str
+// }
+
+// console.log(ucfirst('cheese'));
+
+
+//! Отработка циклов
+
+//? Выведите с помощью цикла столбец чисел от 1 до 100.
+
+// for (i = 1; i <= 100; i++) {
+//    console.log(i);
+// }
+
+//? Выведите с помощью цикла столбец чисел от 100 до 1.
+
+// for (i = 100; i >= 1; i--) {
+//    console.log(i);
+// }
+
+
+//? Выведите с помощью цикла столбец четных чисел от 1 до 100.
+
+// for (i = 1; i <= 100; i++) {
+//    if (i % 2 == 0) {
+//       console.log(i);
+//    }
+// }
+
+
+//?  Заполните массив 10-ю иксами с помощью цикла. 
+
+// const arr = []
+
+// for (i = 0; i < 9; i++) {
+//    arr.push('x')
+// }
+
+// console.log(arr);
+
+
+//? Заполните массив числами от 1 до 10 с помощью цикла. 
+
+// const arr = []
+
+// for (let i = 0; i <= 9; i++) {
+//    arr.push(i + 1)
+// }
+
+// console.log(arr);
+
+
+//? Заполните массив 10-ю случайными числами (дробями) от 0 до 1 с помощью цикла. Дроби округляйте до двух знаков в дробной части.
+
+// const arr = []
+
+// for (i = 0; i < 9; i++) {
+//    arr.push(Math.floor(Math.random() * 100 + 1) / 100)
+// }
+
+// console.log(arr);
+
+
+//?  Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла.
+
+
+// const arr = []
+
+// for (i = 0; i < 9; i++) {
+//    arr.push(Math.floor(Math.random() * 10 + 1))
+// }
+
+// console.log(arr);
+
+
+//? Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти.
+
+
+// const arr = [1, 2, 4, 45, 78, -71, 4, 5, 6, 8]
+// const arr1 = []
+
+// for (i = 0; i <= arr.length; i++) {
+//    if (arr[i] >= 0 && arr[i] <= 10) {
+//       arr1.push(arr[i])
+//    }
+// }
+
+// console.log(arr1);
+
+
+
+//? Дан массив с числами. С помощью цикла проверьте, что в нем есть элемент со значением 5. 
+//? Как только будет найден первый такой элемент - выведите 'Есть' и оборвите цикл. Если такого элемента нет - ничего не выводите.
+
+
+// const arr = [1, 2, 5]
+// const arr1 = [1, 2, 5, 10]
+// const arr2 = [5, 5, 5]
+// const arr3 = [5, 1, 1]
+// const arr4 = [1, 1, 1]
+
+// function finndFive(arr) {
+//    for (i = 0; i <= arr.length; i++) {
+//       if (arr[i] === 5) {
+//          console.log('Есть', i + 1);
+//          break
+//       }
+//    }
+// }
+
+// finndFive(arr)
+// finndFive(arr1)
+// finndFive(arr2)
+// finndFive(arr3)
+// finndFive(arr4)
+
+
+//? Дан массив с числами. С помощью цикла найдите сумму элементов этого массива.
+
+
+// const arr = [1, 2, 4, 45, 78, -71, 4, 5, 6, 8]
+// let sum = 0
+
+// for (let i = 0; i < arr.length; i++) {
+//    sum = sum + arr[i]
+// }
+
+// console.log(sum);
+
+
+//? Дан массив с числами. С помощью цикла найдите сумму квадратов элементов этого массива.
+
+// const arr = [1, 2, 4, 45, 78, -71, 4, 5, 6, 8]
+
+// let sum = 0
+
+// for (let i = 0; i < arr.length; i++) {
+//    sum = sum + arr[i] ** 2
+// }
+
+// console.log(sum);
+
+
+//? Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество).
+
+// const arr = [1, 2, 4, 45, 78, -71, 4, 5, 6, 8]
+
+// let sum = 0
+
+// for (let i = 0; i < arr.length; i++) {
+//    sum = sum + arr[i]
+// }
+
+// const res = sum / arr.length
+
+// console.log(res);
