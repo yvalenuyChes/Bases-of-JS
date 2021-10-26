@@ -995,3 +995,364 @@
 // checkArr(arr1)
 // checkArr(arr2)
 // checkArr(arr3)
+
+
+
+//?  Дано число, например 31. Проверьте, что это число не делится ни на одно другое число кроме себя самого и единицы. 
+//?  То есть в нашем случае нужно проверить, что число 31 не делится на все числа от 2 до 30. 
+//?  Если число не делится - выведите 'false', а если делится - выведите 'true'.
+
+
+// const num = 38
+
+// function checkNum(num) {
+//    let res = []
+//    for (i = 2; i < num; i++) {
+//       if (num % i == 0) {
+//          res.push(i);
+//       }
+//    }
+//    if (res.length === 0) {
+//       console.log('Делится только на себя и на еденицу');
+//    } else {
+//       console.log(res);
+//    }
+
+// }
+
+// checkNum(num)
+
+
+//?  Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'.
+
+
+// const arr = [1, 2, 3, 4, 5, 6,]
+
+// function isSimmilar(arr) {
+//    arr.sort()
+//    let data = []
+
+//    for (i = 1; i <= arr.length; i++) {
+//       if (arr[i] === (arr[i - 1]) || arr[i] === (arr[i + 1])) {
+//          data.push(i);
+//       }
+//    }
+//    if (arr.length = 0) {
+//       console.log('Нет одинаковых элементов');
+//    } else {
+//       console.log(`Одинаковые элементы возле индексов: ${data}`);
+//    }
+// }
+
+// isSimmilar(arr)
+
+
+
+
+//?  Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
+
+// function isEquil(a, b) {
+//    if (a === b) {
+//       console.log('Равны')
+//    } else {
+//       console.log('Не равны')
+//    }
+// }
+
+
+// isEquil(1, 1)
+// isEquil(2, 1)
+// isEquil(1, 2)
+// isEquil(11, 11)
+
+
+//? Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
+
+// function moreThenTen(a, b) {
+//    if ((a + b) >= 10) {
+//       console.log(true);
+//    } else {
+//       console.log(false);
+//    }
+// }
+
+// moreThenTen(4, 5)
+// moreThenTen(10, 0)
+// moreThenTen(15, 5)
+// moreThenTen(1, 2)
+
+
+//?  Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а если нет - false.
+
+// function isNegative(num) {
+//    if (num >= 0) {
+//       console.log('Положительное');
+//    } else {
+//       console.log('Отрицательное');
+//    }
+// }
+
+// isNegative(1)
+// isNegative(-1)
+// isNegative(-15)
+// isNegative(15)
+
+
+//! Пирамидки=333
+
+
+//?  С помощью цикла for сформируйте строку '123456789' и запишите ее в переменную str.
+
+// let str = ''
+
+// for (i = 0; i <= 8; i++) {
+//    str = str + `${i + 1}`
+// }
+// console.log(str);
+
+
+//? С помощью цикла for сформируйте строку '987654321' и запишите ее в переменную str.
+
+
+// let str = ''
+
+// for (i = 8; i >= 0; i--) {
+//    str = str + `${i + 1}`
+// }
+// console.log(str);
+
+
+//? С помощью цикла for сформируйте строку '-1-2-3-4-5-6-7-8-9-' и запишите ее в переменную str.
+
+
+// let str = ''
+
+// for (i = 0; i <= 8; i++) {
+//    if (i === 8) {
+//       str = str + `-${i + 1}-`
+//    } else {
+//       str = str + `-${i + 1}`
+//    }
+// }
+// console.log(str);
+
+
+//?  Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5
+
+//? x
+//? xx
+//? xxx
+//? xxxx
+//? xxxxx
+
+
+// let piramide = ''
+
+// for (i = 0; i < 20; i++) {
+//    piramide = piramide + 'x'
+//    console.log(piramide);
+// }
+
+
+
+
+//?  С помощью двух вложенных циклов нарисуйте следующую пирамидку:
+
+//? 1
+//? 22
+//? 333
+//? 4444
+//? 55555
+//? 666666
+//? 7777777
+//? 88888888
+//? 999999999
+
+
+
+
+// for (let i = 1; i <= 9; i++) {
+//    let str = ''
+//    for (let j = 1; j <= i; j++) {
+//       str = str + i;
+//    }
+//    console.log(str);
+// }
+
+
+
+//! Заполнение массивов
+
+
+//?  Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+
+// const arr = []
+// let x = ''
+// for (i = 1; i <= 10; i++) {
+
+//    x = x + 'x'
+//    arr.push(x)
+// }
+
+// console.log(arr);
+
+
+//? Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+
+// const arr = []
+
+// let num = ''
+
+// for (let i = 1; i <= 9; i++) {
+//    num = ''
+//    for (let j = 1; j <= i; j++) {
+//       num = num + i
+
+//    }
+//    arr.push(num)
+// }
+
+// console.log(arr);
+
+
+//?  Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение, которым заполнять массив, 
+//?  а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+
+// function arrayFill(arr, x) {
+//    const returnedArr = []
+//    for (i = 0; i <= x; i++) {
+//       returnedArr.push(arr)
+//    }
+//    return returnedArr
+// }
+
+
+// console.log(arrayFill('x', 5));
+
+
+//?  Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+
+// const arr = [1, 6, 3, 4, 5, 6, 8, 7, 9, 7]
+
+// function arrSumTen(arr) {
+//    let sum = 0
+//    for (i = 0; i <= arr.length; i++) {
+//       if (sum >= 10) {
+//          console.log(sum, arr[i - 1]);
+//          break
+//       } else {
+//          sum = sum + arr[i]
+//       }
+//    }
+// }
+
+// arrSumTen(arr)
+
+
+//? Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+
+// const arr = ['1', '2', '3', '4', '5', '6']
+// const arr1 = [1, 2, 3, 4, 5, 6]
+
+// function reverse2(array) {
+//    let inreriorArr = []
+//    for (i = array.length - 1; i >= 0; i--) {
+//       inreriorArr.push(array[i])
+//    }
+//    return inreriorArr
+// }
+
+// console.log(reverse2(arr));
+// console.log(reverse2(arr1));
+
+
+//? Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+
+// const arr = [[1, 2, 3], [4, 5], [6]]
+
+// const arr1 = [[1, 1, 1], [1, 1, 1, 1], [1, 1]]
+
+// function sumArr(array) {
+//    let sum = 0
+//    for (i = 0; i < array.length; i++) {
+
+//       for (j = 0; j < array[i].length ; j++) {
+//          sum += array[i][j]
+//       }
+//    }
+//    return sum
+// }
+
+// console.log(sumArr(arr1));
+// console.log(sumArr(arr));
+
+
+//? Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным. 
+
+// const arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+// const arr1 = [[[1, 1]], [[1, 1]], [[1, 1]]]
+
+// function sumArr3(array) {
+//    let sum = 0
+//    for (i = 0; i < array.length; i++) {
+//       for (j = 0; j < array[i].length; j++) {
+//          for (k = 0; k < array[i][j].length; k++) {
+//             sum += array[i][j][k]
+//          }
+//       }
+//    }
+//    return sum
+// }
+
+// console.log(sumArr3(arr));
+
+
+//? Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
+
+
+// function numRange(num) {
+//    if (num < 10 && num > 0) {
+//       return true
+//    } else {
+//       return false
+//    }
+// }
+
+// console.log(numRange(10));
+// console.log(numRange(0));
+// console.log(numRange(5));
+// console.log(numRange(-5));
+// console.log(numRange(11));
+
+
+//? Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+
+// const arr = [1, 11, 45, -15, 11, 65, 2, 5, 4, 8, 8, 47, 32]
+
+// const arr1 = []
+
+// for (i = 0; i < arr.length; i++) {
+//    if (numRange(arr[i])) {
+//       arr1.push(arr[i])
+//    }
+// }
+
+// console.log(arr1);
+
+
+//? Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+
+// function getDigitsSum(num) {
+//    numStr = `${num}`
+//    let sum = 0
+
+//    for (i = 0; i < numStr.length; i++) {
+//       sum += +numStr[i]
+//    }
+//    return sum
+// }
+// console.log(getDigitsSum(45));
+// console.log(getDigitsSum(78));
+// console.log(getDigitsSum(11));
+// console.log(getDigitsSum(5));
