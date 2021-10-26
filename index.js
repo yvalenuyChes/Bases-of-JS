@@ -1607,3 +1607,44 @@
 // const res = sum / arr.length
 
 // console.log(res);
+
+
+
+
+//!!! Практика JavaScript
+
+//? Даны 3 инпута и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в четвертый инпут.
+
+
+// const inputs = document.querySelectorAll('.cls')
+// const button = document.getElementById('button')
+// let sumValue = document.querySelector('.sum')
+
+// function getValues() {
+//    let sum = 0
+//    for (i = 0; i < inputs.length; i++) {
+//       sum += inputs[i].value
+//    }
+//    sumValue.value = sum
+// }
+
+// button.addEventListener('click', getValues)
+
+
+//?  Даны N инпутов с классом .num и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в абзац с id="result"
+
+// const inputs = document.querySelectorAll('.cls')
+// const button = document.getElementById('button')
+// let sumValue = document.getElementById('result')
+
+// function getValues() {
+//    let sum = 0
+//    for (i = 0; i < inputs.length; i++) {
+//       sum += +inputs[i].value
+//    }
+//    sumValue.innerHTML = sum
+// }
+
+// button.addEventListener('click', getValues)
+
+
