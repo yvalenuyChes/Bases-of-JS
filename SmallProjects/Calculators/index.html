@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <div>
+      <h2>Калькуляторы геометрических фигур</h2>
+      <div class="squere">
+         <h2>Площадь и периметр квадрата</h2>
+         <select class="select">
+            <option value="sqr">Площадь</option>
+            <option value="per">Периметр</option>
+         </select>
+         <input placeholder="Число" class="input" />
+         <button class="button">Получить результат</button>
+         <p class="result">Результат:</p>
+      </div>
+
+      <div class="rectangle">
+         <h2>Площадь и периметр прямоугольника</h2>
+         <select class="select">
+            <option value="sqr">Площадь</option>
+            <option value="per">Периметр</option>
+         </select>
+         <input placeholder="Ширина" class="rectangle__input-width" />
+         <input placeholder="Высота" class="rectangle__input-heght" />
+         <button class="button">Получить результат</button>
+         <p class="result">Результат:</p>
+      </div>
+      <div class="circle">
+         <h2>Площадь круга и длина окружности</h2>
+         <select class="select">
+            <option value="sqr">Площадь круга</option>
+            <option value="long">Длина окружности</option>
+         </select>
+         <input placeholder="Радиус" class="circle__input" />
+         <button class="button">Получить результат</button>
+         <p class="result">Результат:</p>
+      </div>
+      <div class="triangle">
+         <h2>Площадь треугольника</h2>
+         <input placeholder="Первая сторона" class="first__side" />
+         <input placeholder="Вторая сторона" class="second__side" />
+         <input placeholder="Третья сторона" class="third__side" />
+         <button class="button">Получить результат</button>
+         <p class="result">Результат:</p>
+      </div>
+   </div>
+   <div class="square__equations">
+      <h2>Математические калькуляторы</h2>
+      <div>
+         <h2>Найти корень квадратного уравнения</h2>
+         <input placeholder="Первое значение" class="first__argument" />
+         <input placeholder="Второе значение" class="second__argument" />
+         <input placeholder="Третье значение" class="third__argument" />
+         <button class="button">Получить результат</button>
+         <p class="result">Результат:</p>
+      </div>
+   </div>
+   <div class="pifagor" >
+      <h2>Тройка Пифагора</h2>
+      <input placeholder="Самое большое значение" class="first__argument" />
+      <input placeholder="Второе значение" class="second__argument" />
+      <input placeholder="Третье значение" class="third__argument" />
+      <button class="button">Получить результат</button>
+      <p class="result">Результат:</p>
+   </div>
+   <div class="dividers" >
+      <h2>Делители числа</h2>
+      <input placeholder="Введите число" class="input" />
+      <button class="button">Получить результат</button>
+      <p class="result">Результат:</p>
+   </div>
+   <div class="dividers__two" >
+      <h2>Делители суммы чисел</h2>
+      <input placeholder="Введите число" class="input" />
+      <input placeholder="Введите число" class="input2" />
+      <button class="button">Получить результат</button>
+      <p class="result">Результат:</p>
+   </div>
+   <script src="./script.js"></script>
+</body>
+
+</html>
