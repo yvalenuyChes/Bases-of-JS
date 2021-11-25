@@ -211,16 +211,19 @@ function getDividers2(){
   const secondVal = +dividersInput2.value
   const arrResult = []
 
-  let mixNum = 0
+  let minNum = 0
+  let maxNum = 0
 
   if(firstVal < secondVal){
-   mixNum = firstVal
+   minNum = firstVal
+   maxNum = secondVal
   }else{
-   mixNum = secondVal
+   minNum = secondVal
+   maxNum = firstVal
   }
 
-  for(let i = 0; i <= mixNum; i++){
-   if(firstVal % i == 0){
+  for(let i = 1; i <= minNum; i++){
+   if(minNum % i == 0 && maxNum % i == 0 ){
       arrResult.push(i)
    }
   }
