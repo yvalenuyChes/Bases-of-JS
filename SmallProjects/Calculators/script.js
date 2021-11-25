@@ -209,32 +209,26 @@ const divideRsresult2 = dividersContainer2.querySelector('.result')
 function getDividers2(){
   const firstVal = +dividersInput1.value
   const secondVal = +dividersInput2.value
-
-  const arrDeviders1 = []
-  const arrDeviders2 = []
   const arrResult = []
 
-   for(i = 1; i <= firstVal; i++){
-      if(firstVal % i == 0){
-         arrDeviders1.push(i)
-      }
+  let mixNum = 0
+
+  if(firstVal < secondVal){
+   mixNum = firstVal
+  }else{
+   mixNum = secondVal
+  }
+
+  for(let i = 0; i <= mixNum; i++){
+   if(firstVal % i == 0){
+      arrResult.push(i)
    }
+  }
 
-   for(i = 1; i <= secondVal; i++){
-      if(secondVal % i == 0){
-         arrDeviders2.push(i)
-      }
-   }
-
-   for(i = 0; i < arrDeviders1.length; i++){
-      if(arrDeviders1[i] === arrDeviders2[i]){
-         arrResult.push(arrDeviders1[i])
-      }
-
-   }
-
-   divideRsresult.textContent = `Результат: ${arrResult}`
+   divideRsresult2.textContent = `Результат: ${arrResult[arrResult.length - 1]}`
 }
 
 
 dividersButton2.addEventListener('click', getDividers2)
+
+
